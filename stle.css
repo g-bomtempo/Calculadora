@@ -1,0 +1,46 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.navegacao{
+    position:relative;	 
+	margin: 0 auto;
+	padding: 50px 0;		
+	background: #dbdbdb;	
+}
+nav li{
+	display: inline;
+	text-align: center;
+	margin: 0 0 0 150px;
+}
+nav a{
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: justify;
+	display: inline;	  	   		
+}
+.principal{
+	padding: 1em 0;
+	font-weight: bold;
+	text-align: center;
+    background: linear-gradient(#d3d2d2, #888888);
+}
+.calculadora{
+	position: relative;
+	font-size: 24px;
+	text-align: center;
+	margin: 20px;	
+	line-height: 2;
+}
+nav h1, h2, h3 {
+	
+	box-sizing: border-box;    
+    border: 2px #000000 solid;
+    border-radius: 10px;  
+}
+.copyright{
+	background: #afafaf;
+	width: 940px;
+	font-weight: bold;
+	text-align: center;
+	margin: 2em auto;
+}
