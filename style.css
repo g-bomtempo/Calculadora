@@ -9,14 +9,14 @@ body{
 }
 nav li{
 	display: inline;
-	text-align: center;
-	margin: 0 0 0 150px;
+	text-align: center;	
+	margin: 0 0 0 430px;	
 }
 nav a{
 	text-transform: uppercase;
 	font-weight: bold;
-	text-align: justify;
-	display: inline;	  	   		
+	text-align: right;
+	display: inline; 	   		
 }
 .principal{
 	padding: 1em 0;
@@ -31,16 +31,37 @@ nav a{
 	margin: 20px;	
 	line-height: 2;
 }
-nav h1, h2, h3 {
-	
+nav h1, h2, h3 {	
 	box-sizing: border-box;    
     border: 2px #000000 solid;
-    border-radius: 10px;  
+    border-radius: 10px;	
+	display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;    
+    margin: 0 0 1.5%;
+    padding: 10px 10px; 	
+}
+nav h4 {	
+	box-sizing: border-box;    
+    border: 2px #000000 solid;
+    border-radius: 10px;	
+	display: inline-block;
+    text-align: center;
+	font-size: 50px;
+    width: 15%;       
+    margin: 0 0 0 9%;
+    padding: 20px 10px; 	
+}
+nav h4:hover{
+	border-color: #C78C19; 
+	font-size: 70px;
 }
 .copyright{
 	background: #afafaf;
-	width: 940px;
+	width: auto;
 	font-weight: bold;
+	font-size: 20px;
 	text-align: center;
 	margin: 2em auto;
 }
