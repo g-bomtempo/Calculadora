@@ -1,3 +1,11 @@
+<?php
+
+include_once 'matematica.php';
+$primeirosNumeros = new Matematica();
+$numeros = $primeirosNumeros->exibirNumeros1();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,7 +24,7 @@
         <header>
             <nav class="navegacao">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="https://pt.wikihow.com/Utilizar-uma-Calculadora-Cient%C3%ADfica#:~:text=Na%20maioria%20das%20calculadoras%2C%20basta,teste%20simples%2C%20como%2023.">Instruções</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -27,25 +35,37 @@
             <section class="principal">
                 <h1>Calculadora Básica</h1>
             </section>
+            <table>
+                <tr>
+                    <td><button>C</button></td>
+                    <td><button><</button></td>
+                    <td><button>/</button></td>
+                    <td><button>*</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td rowspan="3"><button>=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button>0</button></td>
+                    <td><button>.</button></td>
+                </tr>
+            </table>
 
-            <nav class="calculadora">
-                <h1>7</h1>
-                <h1>8</h1>
-                <h1>9</h1>
-                <h2>4</h2>
-                <h2>5</h2>
-                <h2>6</h2>
-                <h3>1</h3>
-                <h3>2</h3>
-                <h3>3</h3>
-            </nav> 
-            
-            <nav class="operadores">
-                <h4>+</h4>
-                <h4>-</h4>
-                <h4>*</h4>
-                <h4>/</h4>
-            </nav>
         </main>
 
         <footer>
