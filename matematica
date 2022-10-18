@@ -1,0 +1,18 @@
+<?php
+
+class Matematica{
+
+    public function exibirNumeros1():array{   
+
+        $numero = [
+            [
+            'primeiraLinha' => 
+            ]
+
+        ];
+
+        return $numero;
+
+    }
+
+}
