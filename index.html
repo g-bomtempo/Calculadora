@@ -1,8 +1,6 @@
 <?php
 
 include_once 'matematica.php';
-$primeirosNumeros = new Matematica();
-$numeros = $primeirosNumeros->exibirNumeros1();
 
 ?>
 
@@ -25,7 +23,7 @@ $numeros = $primeirosNumeros->exibirNumeros1();
             <nav class="navegacao">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="https://pt.wikihow.com/Utilizar-uma-Calculadora-Cient%C3%ADfica#:~:text=Na%20maioria%20das%20calculadoras%2C%20basta,teste%20simples%2C%20como%2023.">Instruções</a></li>
+                    <li><a href="https://pt.wikihow.com/Usar-uma-Calculadora">Instruções</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
@@ -35,37 +33,40 @@ $numeros = $primeirosNumeros->exibirNumeros1();
             <section class="principal">
                 <h1>Calculadora Básica</h1>
             </section>
-            <table>
-                <tr>
-                    <td><button>C</button></td>
-                    <td><button><</button></td>
-                    <td><button>/</button></td>
-                    <td><button>*</button></td>
-                </tr>
-                <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>-</button></td>
-                </tr>
-                <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>+</button></td>
-                </tr>
-                <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td rowspan="3"><button>=</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button>0</button></td>
-                    <td><button>.</button></td>
-                </tr>
-            </table>
 
+            <div class="calculadora">
+                <p id="resultado">asdsad</p>           
+                <table>
+                    <tr>
+                        <td><button class="botao">C</button></td>
+                        <td><button class="botao"><</button></td>
+                        <td><button class="botao">/</button></td>
+                        <td><button class="botao">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao">7</button></td>
+                        <td><button class="botao">8</button></td>
+                        <td><button class="botao">9</button></td>
+                        <td><button class="botao">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao">4</button></td>
+                        <td><button class="botao">5</button></td>
+                        <td><button class="botao">6</button></td>
+                        <td><button class="botao">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao">1</button></td>
+                        <td><button class="botao">2</button></td>
+                        <td><button class="botao">3</button></td>
+                        <td rowspan="3"><button class="botao" style="height: 100px;">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="botao" style="width: 135px;">0</button></td>
+                        <td><button class="botao">.</button ></td>
+                    </tr>
+                </table>
+            </div>
         </main>
 
         <footer>
