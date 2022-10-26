@@ -2,6 +2,18 @@
 
 include_once 'matematica.php';
 
+    $nro1 = 0;
+    $resultado = 0;
+    
+    if (isset($_GET['nro1'],$_GET['resultado'])){
+        $nro1 = $_GET['nro1'];
+        $resultado = $_GET['resultado'];
+
+        $resultado = $nro1;
+
+        
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -35,42 +47,69 @@ include_once 'matematica.php';
             </section>
 
             <div class="calculadora">
-                <p id="resultado">asdsad</p>           
+                <p id="resultado"></p>           
                 <table>
                     <tr>
-                        <td><button class="botao">C</button></td>
-                        <td><button class="botao"><</button></td>
-                        <td><button class="botao">/</button></td>
-                        <td><button class="botao">*</button></td>
+                        <td><button class="botao" onclick="limpar()">C</button></td>
+                        <td><button class="botao" onclick="apagar()"><</button></td>
+                        <td><button class="botao" onclick="inserir('/')">/</button></td>
+                        <td><button class="botao" onclick="inserir('*')">*</button></td>
                     </tr>
                     <tr>
-                        <td><button class="botao">7</button></td>
-                        <td><button class="botao">8</button></td>
-                        <td><button class="botao">9</button></td>
-                        <td><button class="botao">-</button></td>
+                        <td><button class="botao" onclick="inserir('7')">7</button></td>
+                        <td><button class="botao" onclick="inserir('8')">8</button></td>
+                        <td><button class="botao" onclick="inserir('9')">9</button></td>
+                        <td><button class="botao" onclick="inserir('-')">-</button></td>
                     </tr>
                     <tr>
-                        <td><button class="botao">4</button></td>
-                        <td><button class="botao">5</button></td>
-                        <td><button class="botao">6</button></td>
-                        <td><button class="botao">+</button></td>
+                        <td><button class="botao" onclick="inserir('4')">4</button></td>
+                        <td><button class="botao" onclick="inserir('5')">5</button></td>
+                        <td><button class="botao" onclick="inserir('6')">6</button></td>
+                        <td><button class="botao" onclick="inserir('+')">+</button></td>
                     </tr>
                     <tr>
-                        <td><button class="botao">1</button></td>
-                        <td><button class="botao">2</button></td>
-                        <td><button class="botao">3</button></td>
-                        <td rowspan="3"><button class="botao" style="height: 100px;">=</button></td>
+                        <td><button class="botao" onclick="inserir('1')">1</button></td>
+                        <td><button class="botao" onclick="inserir('2')">2</button></td>
+                        <td><button class="botao" onclick="inserir('3')">3</button></td>
+                        <td rowspan="3"><button class="botao" style="height: 100px;" onclick="calcular()">=</button></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><button class="botao" style="width: 135px;">0</button></td>
-                        <td><button class="botao">.</button ></td>
+                        <td colspan="2"><button class="botao" onclick="inserir('0')" style="width: 135px;">0</button></td>
+                        <td><button class="botao" onclick="inserir('.')">.</button ></td>
                     </tr>
                 </table>
             </div>
         </main>
 
+
+
         <footer>
             <p class="copyright">Copyright Gabriel Bomtempo 2022</p>
         </footer>
+
+        <script>
+            function inserir(num){
+                var numero = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML = numero + num;
+            }
+            function limpar(){
+                document.getElementById('resultado').innerHTML = " ";
+            }
+            function apagar(){
+                var resultado = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
+            }
+            function calcular(){
+                var resultado = document.getElementById('resultado').innerHTML;
+                if (resultado){
+                    document.getElementById('resultado').innerHTML = eval(resultado);
+                }
+                else{
+                    document.getElementById('resultado').innerHTML = "Nada para calcular";
+                }
+            }
+        </script>
+
+
     </body>
 </html>
